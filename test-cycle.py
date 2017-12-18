@@ -9,7 +9,7 @@ import time
 def main():
     bd = PyMata3()
 
-    # bd.set_pin_mode(1, Constants.DIGITAL)
+    bd.set_pin_mode(0, Constants.OUTPUT)
 
     for i in range(10):
         bd.digital_write(0, 1)
