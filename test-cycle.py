@@ -9,12 +9,14 @@ import time
 def main():
     bd = PyMata3()
 
-    bd.set_pin_mode(0, Constants.OUTPUT)
+    bd.set_pin_mode(2, Constants.OUTPUT)
 
-    for i in range(10):
-        bd.digital_write(0, 1)
+    for i in range(100):
+        bd.digital_write(2, 1)
+        print('  1')
         time.sleep(3)
-        bd.digital_write(0, 0)
+        bd.digital_write(2, 0)
+        print('0  ')
         time.sleep(2)
 
     bd.shutdown()
